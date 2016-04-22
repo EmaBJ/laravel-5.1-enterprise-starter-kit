@@ -113,6 +113,120 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Home route name
+    |--------------------------------------------------------------------------
+    |
+    | The name of the route that requests will be redirected to when calling
+    | the 'home' or '/' route.
+    | This setting defaults to the 'welcome' route and it will be checked against
+    | the users permission before redirecting, if the user does not have the
+    | permission required to see the configured home route, the 'welcome'
+    | route will be selected.
+    |
+    */
+    'home_route' => env('APP_HOME_ROUTE', 'welcome'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Long name
+    |--------------------------------------------------------------------------
+    |
+    | The long name for the application displayed on the main menu bar on the
+    | left when it is sized wide.
+    |
+    | NOTE: The long name supports HTML markup for styling.
+    */
+    'long_name' => env('APP_LONG_NAME', '<b>Laravel 5.1 </b>ESK'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Short name
+    |--------------------------------------------------------------------------
+    |
+    | The short name for the application, display in the tab or Web browser title
+    | and on the main menu bar on the left when it is sized to a small.
+    |
+    | NOTE: The short name does not support any HTML markup.
+    */
+    'short_name' => env('APP_SHORT_NAME', 'LESK'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Tag line
+    |--------------------------------------------------------------------------
+    |
+    | The tag line appears at the bottom of every page on the right and can be
+    | anything you want.
+    |
+    | NOTE: The tag line supports HTML markup for styling.
+    */
+    'tag_line' => env('APP_TAG_LINE', 'Anything you want'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Copyright line
+    |--------------------------------------------------------------------------
+    |
+    | The copyright line appear at the bottom of every page on the left and is
+    | a convenient place to show a copyright notice, but it can also be
+    | anything that you want.
+    |
+    | NOTE: The tag line supports HTML markup for styling.
+    */
+    'copyright_line' => env('APP_COPYRIGHT', '<strong>Copyright &copy; 2015 <a href="#">Company</a>.</strong> All rights reserved.'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Allow registration
+    |--------------------------------------------------------------------------
+    |
+    | Boolean flag that allows users to register themselves, defaults to true.
+    |
+    */
+    'allow_registration' => env('APP_ALLOW_REGISTRATION', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Notification area
+    |--------------------------------------------------------------------------
+    |
+    | Boolean flag that shows the notification area boilerplate, defaults to true.
+    |
+    */
+    'notification_area' => env('APP_NOTIFICATION_AREA', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Extended user menu
+    |--------------------------------------------------------------------------
+    |
+    | Boolean flag that shows extended user menu boilerplate, defaults to true.
+    |
+    */
+    'extended_user_menu' => env('APP_EXTENDED_USER_MENU', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | User profile link
+    |--------------------------------------------------------------------------
+    |
+    | Boolean flag that shows the user profile link boilerplate, defaults to true.
+    |
+    */
+    'user_profile_link' => env('APP_USER_PROFILE_LINK', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Right sidebar
+    |--------------------------------------------------------------------------
+    |
+    | Boolean flag that shows the right sidebar area boilerplate, defaults to true.
+    |
+    */
+    'right_sidebar' => env('APP_RIGHT_SIDEBAR', true),
+
+    /*
+    |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
@@ -121,7 +235,6 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
-
     'providers' => [
 
         /*
@@ -169,7 +282,7 @@ return [
         Zizaco\Entrust\EntrustServiceProvider::class,
         Zofe\Rapyd\RapydServiceProvider::class,
         Baum\Providers\BaumServiceProvider::class,
-        Caffeinated\Modules\ModulesServiceProvider::class,
+        Sroutier\L51ESKModules\ModulesServiceProvider::class,
 
     ],
 
@@ -226,7 +339,7 @@ return [
         'Theme'       => YAAP\Theme\Facades\Theme::class,
         'Entrust'     => Zizaco\Entrust\EntrustFacade::class,
         'MenuBuilder' => App\Facades\MenuBuilderFacade::class,
-        'Module'      => Caffeinated\Modules\Facades\Module::class,
+        'Module'      => Sroutier\L51ESKModules\Facades\Module::class,
     ],
 
 ];
